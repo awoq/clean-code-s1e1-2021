@@ -10,10 +10,10 @@
   display: block;
   text-align: right;
 }
-.header .header-img {
+.header__img {
   width: 100%;
 }
-.header .header-info {
+.header__info {
   font-family: fantasy, cursive;
 }
 
@@ -34,7 +34,7 @@
   display: inline-block;
   flex-grow: 1;
 }
-.new-task-wrapper {
+.task-section__wrapper {
   display: flex;
 }
 ul {
@@ -62,8 +62,7 @@ button {
   color: #3a3a3a;
 }
 /* Heading */
-.title,
-.add-task-title {
+.task-section__title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -72,7 +71,8 @@ button {
   margin: 0;
   text-transform: uppercase;
 }
-.task-field {
+.task-section__field,
+.task-item__field {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -84,21 +84,22 @@ button {
   font-family: Lato, sans-serif;
   color: #888;
 }
-.task-field:focus {
+.task-section__field:focus,
+.task-item__field:focus {
   color: #333;
 }
 
 /* New Task */
-.add-task-title {
+.create-title {
   display: block;
   margin: 0 0 20px;
 }
-.task-field#new-task {
+.new-task {
   width: 318px;
 }
 
 /* Task list */
-.item {
+.task-item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -107,47 +108,47 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-.item > * {
+.task-item > * {
   vertical-align: middle;
 }
 
-.item > .task-check {
+.task-item__check {
   margin: 0 10px;
 }
-.item > .task-name {
+.task-item__name {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-.item >    .task-field {
+.task-item__field {
   width: 226px;
 }
-.delete .img {
+.btn__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.delete .img:hover {
+.btn__img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.task-list#completed-tasks .task-name {
+.completed-tasks .task-item__name {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.task-list .item .task-field {
+.task-item__field {
   display: none;
 }
 
-.task-list .item.edit-mode .task-field {
+.task-item_editable .task-item__field {
   display: inline-block;
   width: 224px;
 }
 
-.task-list .item.edit-mode .task-name {
+.task-item_editable .task-item__name {
   display: none;
 }
